@@ -1,0 +1,77 @@
+// Import variables and mixins
+@import "./base/mixins";
+@import "./base/variables";
+
+// Import components
+@import "./components/navbar";
+@import "./components/buttons";
+
+// Import pages
+@import "./pages/home.scss";
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $white-base;
+}
+
+.container {
+  max-width: auto;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  position: relative;
+}
+
+.font-lg {
+  color: $indigo-black;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+
+.font-sm {
+  color: $indigo-dark;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 620px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1320px;
+  }
+}

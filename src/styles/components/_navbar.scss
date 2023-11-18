@@ -1,0 +1,127 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+// navbar
+.nav {
+  width: 100%;
+  background-color: $white-light;
+  padding-block: 1rem;
+
+  // nav wrapper
+  .nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+
+    // small-device-menu
+    .small-device-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    // nav-brand
+    .nav-brand {
+      display: none;
+      cursor: pointer;
+    }
+
+    // toggle button
+    .toggle-btn {
+      height: 2.3rem;
+      width: 2.3rem;
+      background: none;
+      border: none;
+      outline: none;
+      border-radius: 0.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 100ms;
+      cursor: pointer;
+
+      .toggle-btn-svg {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+
+    // nav list
+    .navlist {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 1rem;
+
+      // notification-avatar
+      .notification-avatar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .notification {
+          cursor: pointer;
+        }
+
+        .avatar {
+          display: none;
+        }
+      }
+
+      // nav link
+      .navlink {
+        color: $indigo-dark;
+        text-decoration: none;
+      }
+    }
+
+    // navbar open
+    .navbar-open {
+      display: flex;
+    }
+
+    // navbar ope
+    .navbar-close {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    // nav wrapper
+    .nav-wrapper {
+      flex-direction: row;
+      align-items: center;
+
+      // small-device-menu
+      .small-device-menu {
+        display: none;
+      }
+
+      // nav-brand
+      .nav-brand {
+        display: block;
+      }
+
+      // navlist
+      .navlist {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        // notification-avatar
+        .notification-avatar {
+          .avatar {
+            display: block;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

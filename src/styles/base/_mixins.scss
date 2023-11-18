@@ -1,0 +1,14 @@
+@import "variables";
+
+@mixin button-style($background, $color, $border, $border-radius) {
+  background-color: $background;
+  color: $color;
+  border: 1px solid $border;
+  border-radius: $border-radius;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+}
+
+

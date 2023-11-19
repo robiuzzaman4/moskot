@@ -1,0 +1,24 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  width: 100%;
+
+  // spinner-img
+  .spinner-img {
+    animation: loading-spinner 1s linear infinite;
+  }
+}
+
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

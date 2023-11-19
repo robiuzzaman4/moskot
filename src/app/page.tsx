@@ -25,6 +25,9 @@ const Home = () => {
             <Link href="/signup">
               <button className="btn-indigo-solid">Sign up</button>
             </Link>
+            <Link href="/admin-dashboard">
+              <button className="btn-indigo-solid">Admin Dashboard</button>
+            </Link>
           </div>
         </div>
       </section>

@@ -2,5 +2,8 @@
 @import "../base/variables";
 
 .btn-indigo-solid {
-  @include button-style($indigo-light, $white-base, $indigo-light, 0.8rem);
+  @include button-style($indigo-light, $white-base, $indigo-light, 0.5rem);
+}
+.btn-indigo-outline {
+  @include button-style($white-base, $indigo-light, $indigo-light, 0.5rem);
 }

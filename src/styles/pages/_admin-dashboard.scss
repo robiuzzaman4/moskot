@@ -1,0 +1,68 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+// create-team-page
+.create-team-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 4rem;
+
+  // create-team
+  .create-team {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+
+    // create-team-texts
+    .create-team-texts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      // create-team-title
+      .create-team-title {
+        color: $dark-black;
+        font-weight: 700;
+        margin-right: 2rem;
+      }
+
+      // existing-team-title
+      .existing-team-title {
+        color: $dark-semi-transparent;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+
+    // create-team-btn
+    .create-team-btn {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .create-team-page {
+    // create-team
+    .create-team {
+      flex-direction: row;
+      justify-content: space-between;
+
+      // create-team-texts 
+      .create-team-texts {
+
+        // create-team-title
+        .create-team-title {
+          margin-right: 0rem;
+        }
+      }
+      // create-team-btn
+      .create-team-btn {
+        width: fit-content;
+      }
+    }
+  }
+}

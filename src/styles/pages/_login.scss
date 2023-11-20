@@ -1,0 +1,68 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.login {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // login-card
+  .login-card {
+    width: 100%;
+    max-width: 20rem;
+    margin-inline: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    // login-title
+    .login-title {
+      color: $dark-light;
+      font-weight: 500;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    // form
+    .form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      // input
+      .input {
+        @include input-style($indigo-light, $indigo-light, 0.3rem);
+      }
+
+      // forgot-pass
+      .forgot-pass, signup-cta {
+        color: $dark-semi-transparent;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      // signup-cta
+      .signup-cta {
+        color: $dark-semi-transparent;
+        font-weight: 500;
+        text-align: center;
+
+        // signup-link
+        .signup-link {
+            opacity: 30%;
+            color: $dark-medium;
+            text-decoration: none;
+            margin-left: 0.25rem;
+        }
+      }
+    }
+  }
+}

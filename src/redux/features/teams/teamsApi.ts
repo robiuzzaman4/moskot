@@ -1,5 +1,3 @@
-// "use client"
-
 import { baseApi } from "../api/baseApi";
 
 export const teamsApi = baseApi.injectEndpoints({

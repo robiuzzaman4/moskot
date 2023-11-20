@@ -12,13 +12,15 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <div className="container nav-wrapper">
-        <Image
-          className="nav-brand"
-          src="/brand-logo.svg"
-          alt="Brand Logo"
-          height={40}
-          width={100}
-        />
+        <Link href="/user-dashboard">
+          <Image
+            className="nav-brand"
+            src="/brand-logo.svg"
+            alt="Brand Logo"
+            height={40}
+            width={100}
+          />
+        </Link>
 
         <div className="small-device-menu">
           {/* toggle btn */}
@@ -28,7 +30,6 @@ const Navbar = () => {
           >
             <Image src="/menu.svg" alt="Menu Logo" height={20} width={20} />
           </button>
-
           {/* avatar for small device */}
           <Image
             className="avatar-sm-device"

@@ -2,6 +2,7 @@ import ReduxProvider from "@/redux/provider";
 import "../styles/global.scss";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700", "900"],
@@ -21,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <ReduxProvider>{children}</ReduxProvider>
+        <ReduxProvider>
+          {children}
+          <Toaster/>
+        </ReduxProvider>
       </body>
     </html>
   );

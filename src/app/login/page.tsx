@@ -1,7 +1,47 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const router = useRouter();
+
+  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+
+    const email = form.email.value;
+    const password = form.password.value;
+    const user = {
+      email,
+      password,
+    };
+
+    fetch(
+      "https://little-programmers-frontend-api-abdurrahmantalha.vercel.app/api/v1/user/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+
+        if (data.message === "Successfully logged in") {
+          form.reset();
+          toast.success("Successfully logged in.");
+          router.push("/user-dashboard");
+        }
+      });
+  };
+
   return (
     <section className="login">
       <div className="login-card">
@@ -11,7 +51,7 @@ const Login = () => {
           Welcome to <span>Back!</span>
         </h2>
 
-        <form className="form">
+        <form className="form" onSubmit={handleLogin}>
           <input
             className="input"
             type="email"

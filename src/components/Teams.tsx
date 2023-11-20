@@ -8,7 +8,6 @@ import Spinner from "./Spinner";
 const Teams = () => {
   const { data, isLoading } = useGetTeamsQuery({});
   const teams: Array<Team> = data?.data;
-  console.log(teams);
 
   return (
     <div className="container">

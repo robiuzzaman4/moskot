@@ -7,3 +7,9 @@
 .btn-indigo-outline {
   @include button-style($white-base, $indigo-light, $indigo-light, 0.3rem);
 }
+.btn-black-outline-pill {
+  @include button-style($white-base, $dark-black, $dark-black, 2rem);
+}
+.btn-blue-solid-pill {
+  @include button-style($blue-medium, $white-base, $blue-medium, 2rem);
+}

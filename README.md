@@ -4,6 +4,7 @@
 - **User can Login their account**
 - **User can Register a new account**
 - **Admin can show all teams data**
+- **Admin can create a new team**
 - **Fully responsive website**
 - **Pixel perfact design from figma**
 

@@ -57,12 +57,14 @@ const Login = () => {
             type="email"
             name="email"
             placeholder="Email Address"
+            required
           />
           <input
             className="input"
             type="password"
             name="password"
             placeholder="Password"
+            required
           />
           <p className="forgot-pass">Forgot password?</p>
           <button type="submit" className="btn-indigo-solid">

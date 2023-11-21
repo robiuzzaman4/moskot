@@ -1,25 +1,27 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export interface ITeam {
-  _id: string;
   teamName: string;
   teamCategory: string;
-  createdAt: string;
-  updatedAt: string;
-};
+}
 
-const initialState: ITeam = {
-  _id: "",
-  teamName: "",
-  teamCategory: "",
-  createdAt: "",
-  updatedAt: "",
+interface TeamsState {
+  teams: ITeam[];
+}
+
+const initialState: TeamsState = {
+  teams: [],
 };
 
 const teamsSlice = createSlice({
   initialState: initialState,
   name: "teamsSlice",
-  reducers: {},
+  reducers: {
+    createNewTeam: (state, action: PayloadAction<ITeam>) => {
+      state.teams.push(action.payload);
+    },
+  },
 });
 
+export const { createNewTeam } = teamsSlice.actions;
 export default teamsSlice.reducer;
